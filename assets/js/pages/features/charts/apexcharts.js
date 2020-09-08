@@ -9,34 +9,34 @@ const danger = '#F64E60';
 
 // Class definition
 function generateBubbleData(baseval, count, yrange) {
-    var i = 0;
-    var series = [];
-    while (i < count) {
-      var x = Math.floor(Math.random() * (750 - 1 + 1)) + 1;;
-      var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
-      var z = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
-  
-      series.push([x, y, z]);
-      baseval += 86400000;
-      i++;
-    }
-    return series;
-  }
+	var i = 0;
+	var series = [];
+	while (i < count) {
+		var x = Math.floor(Math.random() * (750 - 1 + 1)) + 1;;
+		var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+		var z = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
+
+		series.push([x, y, z]);
+		baseval += 86400000;
+		i++;
+	}
+	return series;
+}
 
 function generateData(count, yrange) {
-    var i = 0;
-    var series = [];
-    while (i < count) {
-        var x = 'w' + (i + 1).toString();
-        var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+	var i = 0;
+	var series = [];
+	while (i < count) {
+		var x = 'w' + (i + 1).toString();
+		var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
 
-        series.push({
-            x: x,
-            y: y
-        });
-        i++;
-    }
-    return series;
+		series.push({
+			x: x,
+			y: y
+		});
+		i++;
+	}
+	return series;
 }
 
 var KTApexChartsDemo = function () {
@@ -55,7 +55,7 @@ var KTApexChartsDemo = function () {
 					enabled: false
 				}
 			},
-			dataLabels: { 	
+			dataLabels: {
 				enabled: false
 			},
 			stroke: {
@@ -117,14 +117,14 @@ var KTApexChartsDemo = function () {
 		const apexChart = "#chart_3";
 		var options = {
 			series: [{
-				name: 'Net Profit',
-				data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+				name: 'Runs',
+				data: [692, 593, 529, 521, 510, 490, 488, 464, 463, 445]
 			}, {
-				name: 'Revenue',
-				data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+				name: 'Average',
+				data: [69, 53, 35, 34, 56, 40, 37, 33, 30, 55]
 			}, {
-				name: 'Free Cash Flow',
-				data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+				name: 'Strike Rate',
+				data: [143, 135, 132, 135, 204, 153, 162, 141, 119, 157]
 			}],
 			chart: {
 				type: 'bar',
@@ -146,11 +146,11 @@ var KTApexChartsDemo = function () {
 				colors: ['transparent']
 			},
 			xaxis: {
-				categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+				categories: ['David Warner', 'KL Rahul', 'Quinton De Kock', 'Shikhar Dhawan', 'Andre Russell', 'Chris Gayle', 'Rishabh Pant', 'Virat Kohli', 'Shreyas Iyer', 'Johny Bairstow'],
 			},
 			yaxis: {
 				title: {
-					text: '$ (thousands)'
+					text: 'Figures'
 				}
 			},
 			fill: {
@@ -159,7 +159,7 @@ var KTApexChartsDemo = function () {
 			tooltip: {
 				y: {
 					formatter: function (val) {
-						return "$ " + val + " thousands"
+						return val + " Runs"
 					}
 				}
 			},
@@ -172,73 +172,59 @@ var KTApexChartsDemo = function () {
 
 	var _demo4 = function () {
 		const apexChart = "#chart_4";
-		var options = {
-			series: [{
-				name: 'Marine Sprite',
-				data: [44, 55, 41, 37, 22, 43, 21]
-			}, {
-				name: 'Striking Calf',
-				data: [53, 32, 33, 52, 13, 43, 32]
-			}, {
-				name: 'Tank Picture',
-				data: [12, 17, 11, 9, 15, 11, 20]
-			}, {
-				name: 'Bucket Slope',
-				data: [9, 7, 5, 8, 6, 9, 4]
-			}, {
-				name: 'Reborn Kid',
-				data: [25, 12, 19, 32, 25, 24, 10]
-			}],
-			chart: {
-				type: 'bar',
-				height: 350,
-				stacked: true,
-			},
-			plotOptions: {
-				bar: {
-					horizontal: true,
-				},
-			},
-			stroke: {
-				width: 1,
-				colors: ['#fff']
-			},
-			title: {
-				text: 'Fiction Books Sales'
-			},
-			xaxis: {
-				categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],
-				labels: {
-					formatter: function (val) {
-						return val + "K"
-					}
-				}
-			},
-			yaxis: {
-				title: {
-					text: undefined
-				},
-			},
-			tooltip: {
-				y: {
-					formatter: function (val) {
-						return val + "K"
-					}
-				}
-			},
-			fill: {
-				opacity: 1
-			},
-			legend: {
-				position: 'top',
-				horizontalAlign: 'left',
-				offsetX: 40
-			},
-			colors: [primary, success, warning, danger, info]
-		};
+    var options = {
+        series: [{
+            name: 'Wickets',
+            data: [26,25,22,20,19,19,19,18,17,16]
+        }, {
+            name: 'Average',
+            data: [16.5,14.7,21.9,17.4,21.5,15.1,24.7,21.4,22.2,19.5]
+        }, {
+            name: 'Economy',
+            data: [6.7,7.8,7.5,7.2,6.6,8.2,8.7,7.8,6.2,7.1]
+        }],
+        chart: {
+            type: 'bar',
+            height: 350
+        },
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '55%',
+                endingShape: 'rounded'
+            },
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            show: true,
+            width: 2,
+            colors: ['transparent']
+        },
+        xaxis: {
+            categories: ['Imran Tahir', 'Kagiso Rabada', 'Deepak Chahar', 'Shreyas Gopal', 'Jasprit Bumrah', 'Khaleel Ahmed', 'Mohammad Shami', 'Yuzvendra Chahal', 'Rashid Khan' , 'Harbhajan Singh'],
+        },
+        yaxis: {
+            title: {
+                text: 'Figures'
+            }
+        },
+        fill: {
+            opacity: 1
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return  val 
+                }
+            }
+        },
+        colors: [primary, success, warning]
+    };
 
-		var chart = new ApexCharts(document.querySelector(apexChart), options);
-		chart.render();
+    var chart = new ApexCharts(document.querySelector(apexChart), options);
+    chart.render();
 	}
 
 	var _demo5 = function () {
@@ -714,7 +700,7 @@ var KTApexChartsDemo = function () {
 					enabled: true
 				}
 			},
-			colors: [success,danger]
+			colors: [success, danger]
 		};
 
 		var chart = new ApexCharts(document.querySelector(apexChart), options);
@@ -727,31 +713,31 @@ var KTApexChartsDemo = function () {
 			series: [{
 				name: 'Bubble1',
 				data: generateBubbleData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-				  min: 10,
-				  max: 60
+					min: 10,
+					max: 60
 				})
-			  },
-			  {
+			},
+			{
 				name: 'Bubble2',
 				data: generateBubbleData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-				  min: 10,
-				  max: 60
+					min: 10,
+					max: 60
 				})
-			  },
-			  {
+			},
+			{
 				name: 'Bubble3',
 				data: generateBubbleData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-				  min: 10,
-				  max: 60
+					min: 10,
+					max: 60
 				})
-			  },
-			  {
+			},
+			{
 				name: 'Bubble4',
 				data: generateBubbleData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-				  min: 10,
-				  max: 60
+					min: 10,
+					max: 60
 				})
-			  }],
+			}],
 			chart: {
 				height: 350,
 				type: 'bubble',

@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.5.1",
     "sergey": "0.0.13"
   }
 }

@@ -1,0 +1,252 @@
+<!--begin::Main-->
+<div class="d-flex flex-column flex-root">
+
+	<!--begin::Page-->
+	<div class="d-flex flex-row flex-column-fluid page">
+
+		<!--begin::Wrapper-->
+		<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+			<sergey-import src="_header-mobile.html" />
+			<sergey-import src="_header.html" />
+			<sergey-import src="_header-menu-stats.html" />
+			<!--[html-partial:include:{"file":"partials/_header-mobile.html"}]/-->
+
+			<!--[html-partial:include:{"file":"partials/_header.html"}]/-->
+
+			<!--[html-partial:include:{"file":"partials/_header-menu.html"}]/-->
+
+			<!--begin::Container-->
+			<div class="d-flex flex-row flex-column-fluid container">
+
+				<!--begin::Content Wrapper-->
+				<div class="main d-flex flex-column flex-row-fluid">
+
+					<!--[html-partial:include:{"file":"partials/_subheader/subheader-v1.html"}]/-->
+					<div class="content flex-column-fluid" id="kt_content">
+
+						<!--[html-partial:begin:{"id":"demo8/dist/inc/view/demos/pages/index","page":"index"}]/-->
+
+						<!--[html-partial:begin:{"id":"demo1/dist/inc/view/partials/content/dashboards/demo8","page":"index"}]/-->
+
+						<!--begin::Dashboard-->
+
+						<!--begin::Row-->
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="card card-custom card-stretch gutter-b">
+									<div class="card-header border-1 mt-5">
+										<h3 class="card-title text-dark">
+											<span class="font-weight-bolder">2019 Points table</span>
+										</h3>
+									</div>
+									<div class="card-body">
+										<table class="table table-striped table-hover">
+											<thead class="thead-dark">
+												<tr>
+													<th scope="col">Team</th>
+													<th scope="col">Pid</th>
+													<th scope="col">Won</th>
+													<th scope="col">Lost</th>
+													<th scope="col">Tied</th>
+													<th scope="col">N/R</th>
+													<th scope="col">Net RR</th>
+													<th scope="col">For</th>
+													<th scope="col">Against</th>
+													<th scope="col">Pts</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<th scope="row">MI</th>
+													<td>14</td>
+													<td>9</td>
+													<td>5</td>
+													<td>0</td>
+													<td>0</td>
+													<td>+0.421</td>
+													<td>2,380/275.1</td>
+													<td>2,282/277.2</td>
+													<td>18</td>
+												</tr>
+
+												<tr>
+													<th scope="row">CSK</th>
+													<td>14</td>
+													<td>9</td>
+													<td>5</td>
+													<td>0</td>
+													<td>0</td>
+													<td>+0.131</td>
+													<td>2,043/274.1</td>
+													<td>2,012/274.5</td>
+													<td>18</td>
+												</tr>
+
+												<tr>
+													<th scope="row">DC</th>
+													<td>14</td>
+													<td>9</td>
+													<td>5</td>
+													<td>0</td>
+													<td>0</td>
+													<td>+0.044</td>
+													<td>2,207/272.5</td>
+													<td>2,238/278.1</td>
+													<td>18</td>
+												</tr>
+
+												<tr>
+													<th scope="row">SRH</th>
+													<td>14</td>
+													<td>6</td>
+													<td>8</td>
+													<td>0</td>
+													<td>0</td>
+													<td>+0.577</td>
+													<td>2,288/269.2</td>
+													<td>2,200/277.5</td>
+													<td>12</td>
+												</tr>
+
+												<tr>
+													<th scope="row">KKR</th>
+													<td>14</td>
+													<td>6</td>
+													<td>8</td>
+													<td>0</td>
+													<td>0</td>
+													<td>+0.028</td>
+													<td>2,466/270.4</td>
+													<td>2,419/266.2</td>
+													<td>12</td>
+
+												</tr>
+
+												<tr>
+													<th scope="row">KXIP</th>
+													<td>14</td>
+													<td>6</td>
+													<td>8</td>
+													<td>0</td>
+													<td>0</td>
+													<td>-0.251</td>
+													<td>2,429/276.3</td>
+													<td>2,503/277</td>
+													<td>12</td>
+												</tr>
+
+												<tr>
+													<th scope="row">RR</th>
+													<td>14</td>
+													<td>5</td>
+													<td>8</td>
+													<td>0</td>
+													<td>1</td>
+													<td>-0.449</td>
+													<td>2,153/257</td>
+													<td>2,192/248.2</td>
+													<td>11</td>
+												</tr>
+
+												<tr>
+													<th scope="row">RCB</th>
+													<td>14</td>
+													<td>5</td>
+													<td>8</td>
+													<td>0</td>
+													<td>1</td>
+													<td>-0.607</td>
+													<td>2,146/258.4</td>
+													<td>2,266/254.3</td>
+													<td>11</td>
+												</tr>
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-6">
+								<!--begin::Card-->
+								<div class="card card-custom gutter-b">
+									<div class="card-header">
+										<div class="card-title">
+											<h3 class="card-label">2019 Most Runs</h3>
+										</div>
+									</div>
+									<div class="card-body">
+										<!--begin::Chart-->
+										<div id="chart_3"></div>
+										<!--end::Chart-->
+									</div>
+								</div>
+								<!--end::Card-->
+							</div>
+							<div class="col-lg-6">
+								<!--begin::Card-->
+								<div class="card card-custom gutter-b">
+									<div class="card-header">
+										<div class="card-title">
+											<h3 class="card-label">2019 Most Wickets</h3>
+										</div>
+									</div>
+									<div class="card-body">
+										<!--begin::Chart-->
+										<div id="chart_4"></div>
+										<!--end::Chart-->
+									</div>
+								</div>
+								<!--end::Card-->
+							</div>
+						</div>
+						<div class="row">
+							
+						</div>
+						<!--end::Row-->
+
+						<!--end::Dashboard-->
+
+						<!--[html-partial:end:{"id":"demo1/dist/inc/view/partials/content/dashboards/demo8","page":"index"}]/-->
+
+						<!--[html-partial:end:{"id":"demo8/dist/inc/view/demos/pages/index","page":"index"}]/-->
+					</div>
+
+					<!--end::Content-->
+				</div>
+
+				<!--begin::Content Wrapper-->
+			</div>
+
+			<!--end::Container-->
+			<sergey-import src="_footer.html" />
+			<!--[html-partial:include:{"file":"partials/_footer.html"}]/-->
+		</div>
+
+		<!--end::Wrapper-->
+	</div>
+
+	<!--end::Page-->
+</div>
+<script type="text/javascript">
+	var options = {
+		chart: {
+			type: 'line'
+		},
+		series: [{
+			name: 'sales',
+			data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+		}],
+		xaxis: {
+			categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+		}
+	}
+
+	var chart = new ApexCharts(document.querySelector("#chart_3"), options);
+
+	chart.render();
+</script>
+<!--end::Main-->

@@ -1,0 +1,221 @@
+<!--begin::Main-->
+<div class="d-flex flex-column flex-root">
+
+	<!--begin::Page-->
+	<div class="d-flex flex-row flex-column-fluid page">
+
+		<!--begin::Wrapper-->
+		<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+			<sergey-import src="_header-mobile.html" />
+			<sergey-import src="_header.html" />
+			<sergey-import src="_header-menu-schedule.html" />
+			<!--[html-partial:include:{"file":"partials/_header-mobile.html"}]/-->
+
+			<!--[html-partial:include:{"file":"partials/_header.html"}]/-->
+
+			<!--[html-partial:include:{"file":"partials/_header-menu.html"}]/-->
+
+			<!--begin::Container-->
+			<div class="d-flex flex-row flex-column-fluid container">
+
+				<!--begin::Content Wrapper-->
+				<div class="main d-flex flex-column flex-row-fluid">
+
+					<!--[html-partial:include:{"file":"partials/_subheader/subheader-v1.html"}]/-->
+					<div class="content flex-column-fluid" id="kt_content">
+
+						<!--[html-partial:begin:{"id":"demo8/dist/inc/view/demos/pages/index","page":"index"}]/-->
+
+						<!--[html-partial:begin:{"id":"demo1/dist/inc/view/partials/content/dashboards/demo8","page":"index"}]/-->
+
+						<!--begin::Dashboard-->
+
+						<!--begin::Row-->
+						<div class="row">
+							<div class="col-xl-12">
+								<!-- <div class="card card-custom ">
+									<div class="card-header">
+										<h3 class="card-title text-dark">
+											<span class="font-weight-bolder">2019 Points table</span>
+										</h3>
+									</div>
+									<div class="card-body">
+
+									</div>
+								</div> -->
+								<div class="card card-custom card-stretch gutter-b">
+									<div class="card-header border-0 mt-5">
+										<div class="card-title">
+											<h3 class="card-label">
+												Calendar List View
+											</h3>
+										</div>
+										<div class="card-toolbar">
+											<a href="#" class="btn btn-light-primary font-weight-bold">
+												<i class="ki ki-plus "></i> Add Event
+											</a>
+										</div>
+									</div>
+									<div class="card-body">
+										<div id="kt_calendar_new"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--end::Row-->
+
+						<!--end::Dashboard-->
+
+						<!--[html-partial:end:{"id":"demo1/dist/inc/view/partials/content/dashboards/demo8","page":"index"}]/-->
+
+						<!--[html-partial:end:{"id":"demo8/dist/inc/view/demos/pages/index","page":"index"}]/-->
+					</div>
+
+					<!--end::Content-->
+				</div>
+
+				<!--begin::Content Wrapper-->
+			</div>
+
+			<!--end::Container-->
+			<sergey-import src="_footer.html" />
+			<!--[html-partial:include:{"file":"partials/_footer.html"}]/-->
+		</div>
+
+		<!--end::Wrapper-->
+	</div>
+
+	<!--end::Page-->
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	var KTCalendarListView = function () {
+		return {
+			//main function to initiate the module
+			init: function () {
+				var todayDate = moment().startOf('day');
+				var YM = todayDate.format('YYYY-MM');
+				var YESTERDAY = todayDate.clone().subtract(1, 'day').format('YYYY-MM-DD');
+				var TODAY = todayDate.format('YYYY-MM-DD');
+				var TOMORROW = todayDate.clone().add(1, 'day').format('YYYY-MM-DD');
+
+				var calendarEl = document.getElementById('kt_calendar_new');
+				var calendar = new FullCalendar.Calendar(calendarEl, {
+					plugins: ['interaction', 'dayGrid', 'timeGrid', 'list'],
+
+					isRTL: KTUtil.isRTL(),
+					header: {
+						left: 'prev,next today',
+						center: 'title',
+						right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+					},
+
+					height: 800,
+					contentHeight: 750,
+					aspectRatio: 3,  // see: https://fullcalendar.io/docs/aspectRatio
+
+					views: {
+						dayGridMonth: { buttonText: 'month' },
+						timeGridWeek: { buttonText: 'week' },
+						timeGridDay: { buttonText: 'day' },
+						listDay: { buttonText: 'list' },
+						listWeek: { buttonText: 'list' }
+					},
+
+					defaultView: 'listWeek',
+					defaultDate: TODAY,
+
+					editable: true,
+					eventLimit: true, // allow "more" link when too many events
+					navLinks: true,
+					events: [
+						{
+							title: 'MI VS CSK',
+							start: '2020-09-19T19:30:00+05:30',
+							description: 'Mumbai Indians VS Chennai Super Kings',
+							className: "fc-event-primary"
+						},
+						{
+							title: 'DC VS KXIP',
+							start: '2020-09-20T19:30:00+05:30',
+							description: 'Delhi Capitals VS Kings XI Punjab',
+							className: "fc-event-primary"
+						},
+						{
+							title: 'SRH VS RCB',
+							start: '2020-09-21T19:30:00+05:30',
+							description: 'Sunrisers Hyderabad VS Royal Challengers Bangalore',
+							className: "fc-event-primary"
+						},
+						{
+							title: 'RR VS CSK',
+							start: '2020-09-22T19:30:00+05:30',
+							description: 'Rajasthan Royals VS Chennai Super Kings',
+							className: "fc-event-primary"
+						},
+						{
+							title: 'KKR VS MI',
+							start: '2020-09-23T19:30:00+05:30',
+							description: 'Kolkata Knight Riders VS Mumbai Indians',
+							className: "fc-event-primary"
+						},
+						{
+							title: 'KXIP VS RCB',
+							start: '2020-09-24T19:30:00+05:30',
+							description: 'Kings XI Punjab VS Royal Challengers Bangalore',
+							className: "fc-event-primary"
+						},
+						{
+							title: 'CSK VS DC',
+							start: '2020-09-25T19:30:00+05:30',
+							description: 'Chennai Super Kings VS Delhi Capitals',
+							className: "fc-event-primary"
+						},
+						{
+							title: 'KKR VS SRH',
+							start: '2020-09-26T19:30:00+05:30',
+							description: 'Kolkata Knight Riders VS Sunrisers Hyderabad',
+							className: "fc-event-primary"
+						},
+						{
+							title: 'RR VS KXIP',
+							start: '2020-09-27T19:30:00+05:30',
+							description: 'Rajasthan Royals VS Kings XI Punjab',
+							className: "fc-event-primary"
+						},
+						{
+							title: 'RCB VS MI',
+							start: '2020-09-28T19:30:00+05:30',
+							description: 'Royal Challengers Bangalore VS Mumbai Indians',
+							className: "fc-event-primary"
+						}
+
+					],
+
+					eventRender: function (info) {
+						var element = $(info.el);
+
+						if (info.event.extendedProps && info.event.extendedProps.description) {
+							if (element.hasClass('fc-day-grid-event')) {
+								element.data('content', info.event.extendedProps.description);
+								element.data('placement', 'top');
+								KTApp.initPopover(element);
+							} else if (element.hasClass('fc-time-grid-event')) {
+								element.find('.fc-title').append('<div class="fc-description">' + info.event.extendedProps.description + '</div>');
+							} else if (element.find('.fc-list-item-title').lenght !== 0) {
+								element.find('.fc-list-item-title').append('<div class="fc-description">' + info.event.extendedProps.description + '</div>');
+							}
+						}
+					}
+				});
+
+				calendar.render();
+			}
+		};
+	}();
+
+	jQuery(document).ready(function () {
+		KTCalendarListView.init();
+	});
+</script>
+<!--end::Main-->
