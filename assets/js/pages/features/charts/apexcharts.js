@@ -6,6 +6,8 @@ const success = '#1BC5BD';
 const info = '#8950FC';
 const warning = '#FFA800';
 const danger = '#F64E60';
+const black = "#111111";
+
 
 // Class definition
 function generateBubbleData(baseval, count, yrange) {
@@ -172,59 +174,59 @@ var KTApexChartsDemo = function () {
 
 	var _demo4 = function () {
 		const apexChart = "#chart_4";
-    var options = {
-        series: [{
-            name: 'Wickets',
-            data: [26,25,22,20,19,19,19,18,17,16]
-        }, {
-            name: 'Average',
-            data: [16.5,14.7,21.9,17.4,21.5,15.1,24.7,21.4,22.2,19.5]
-        }, {
-            name: 'Economy',
-            data: [6.7,7.8,7.5,7.2,6.6,8.2,8.7,7.8,6.2,7.1]
-        }],
-        chart: {
-            type: 'bar',
-            height: 350
-        },
-        plotOptions: {
-            bar: {
-                horizontal: false,
-                columnWidth: '55%',
-                endingShape: 'rounded'
-            },
-        },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            show: true,
-            width: 2,
-            colors: ['transparent']
-        },
-        xaxis: {
-            categories: ['Imran Tahir', 'Kagiso Rabada', 'Deepak Chahar', 'Shreyas Gopal', 'Jasprit Bumrah', 'Khaleel Ahmed', 'Mohammad Shami', 'Yuzvendra Chahal', 'Rashid Khan' , 'Harbhajan Singh'],
-        },
-        yaxis: {
-            title: {
-                text: 'Figures'
-            }
-        },
-        fill: {
-            opacity: 1
-        },
-        tooltip: {
-            y: {
-                formatter: function (val) {
-                    return  val 
-                }
-            }
-        },
-        colors: [primary, success, warning]
-    };
+		var options = {
+			series: [{
+				name: 'Wickets',
+				data: [26, 25, 22, 20, 19, 19, 19, 18, 17, 16]
+			}, {
+				name: 'Average',
+				data: [16.5, 14.7, 21.9, 17.4, 21.5, 15.1, 24.7, 21.4, 22.2, 19.5]
+			}, {
+				name: 'Economy',
+				data: [6.7, 7.8, 7.5, 7.2, 6.6, 8.2, 8.7, 7.8, 6.2, 7.1]
+			}],
+			chart: {
+				type: 'bar',
+				height: 350
+			},
+			plotOptions: {
+				bar: {
+					horizontal: false,
+					columnWidth: '55%',
+					endingShape: 'rounded'
+				},
+			},
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				show: true,
+				width: 2,
+				colors: ['transparent']
+			},
+			xaxis: {
+				categories: ['Imran Tahir', 'Kagiso Rabada', 'Deepak Chahar', 'Shreyas Gopal', 'Jasprit Bumrah', 'Khaleel Ahmed', 'Mohammad Shami', 'Yuzvendra Chahal', 'Rashid Khan', 'Harbhajan Singh'],
+			},
+			yaxis: {
+				title: {
+					text: 'Figures'
+				}
+			},
+			fill: {
+				opacity: 1
+			},
+			tooltip: {
+				y: {
+					formatter: function (val) {
+						return val
+					}
+				}
+			},
+			colors: [primary, success, warning]
+		};
 
-    var chart = new ApexCharts(document.querySelector(apexChart), options);
-    chart.render();
+		var chart = new ApexCharts(document.querySelector(apexChart), options);
+		chart.render();
 	}
 
 	var _demo5 = function () {
@@ -920,11 +922,12 @@ var KTApexChartsDemo = function () {
 	var _demo11 = function () {
 		const apexChart = "#chart_11";
 		var options = {
-			series: [44, 55, 41, 17, 15],
+			series: [2043, 2194, 2207, 2208, 2288, 2380, 2429, 2466],
 			chart: {
 				width: 380,
 				type: 'donut',
 			},
+			labels: ['CSK', 'RR', 'DC', 'RCB', 'SRH', 'MI', 'KXIP', 'KKR'],
 			responsive: [{
 				breakpoint: 480,
 				options: {
@@ -936,7 +939,7 @@ var KTApexChartsDemo = function () {
 					}
 				}
 			}],
-			colors: [primary, success, warning, danger, info]
+			colors: [warning, info, success, '#3F4254', '#FF4500', '#007bff', danger, primary]
 		};
 
 		var chart = new ApexCharts(document.querySelector(apexChart), options);
@@ -1010,14 +1013,17 @@ var KTApexChartsDemo = function () {
 		const apexChart = "#chart_14";
 		var options = {
 			series: [{
-				name: 'Series 1',
-				data: [80, 50, 30, 40, 100, 20],
+				name: 'MI',
+				data: [92, 98, 93, 91, 94],
 			}, {
-				name: 'Series 2',
-				data: [20, 30, 40, 80, 20, 80],
+				name: 'CSK',
+				data: [85, 83, 86, 98, 94],
 			}, {
-				name: 'Series 3',
-				data: [44, 76, 78, 13, 43, 10],
+				name: 'DC',
+				data: [74, 76, 71, 90, 79],
+			}, {
+				name: 'SRH',
+				data: [66, 61, 63, 68, 59],
 			}],
 			chart: {
 				height: 350,
@@ -1029,19 +1035,19 @@ var KTApexChartsDemo = function () {
 					top: 1
 				}
 			},
+			labels: ['MI', 'CSK', 'DC', 'SRH',],
 			stroke: {
-				width: 0
+				width: 2
 			},
 			fill: {
-				opacity: 0.4
+				opacity: 0.01,
 			},
 			markers: {
 				size: 0
 			},
 			xaxis: {
-				categories: ['2011', '2012', '2013', '2014', '2015', '2016']
-			},
-			colors: [primary, success, warning]
+				categories: ['Batting', 'Bowling', 'Fielding', 'Strategy', 'Fair Play']
+			}
 		};
 
 		var chart = new ApexCharts(document.querySelector(apexChart), options);
